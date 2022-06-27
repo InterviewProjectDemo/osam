@@ -4,6 +4,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+
+using PortfolioManager.DAL;
+using PortfolioManager.BLL;
+
 
 namespace PortfolioManager.API
 {
@@ -21,10 +26,16 @@ namespace PortfolioManager.API
         {
 
             services.AddControllers();
+            services.AddScoped<IStockRepository, StockRepository>();
+            services.AddScoped<IStockTrader, StockTrader>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PortfolioManager.API", Version = "v1" });
             });
+            services.AddDbContext<StockDbContext>(
+                options => options.UseInMemoryDatabase("StockInMemoryDb")
+            );
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

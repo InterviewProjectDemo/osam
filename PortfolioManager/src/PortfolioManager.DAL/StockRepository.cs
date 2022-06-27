@@ -4,50 +4,43 @@ using System.Linq;
 
 namespace PortfolioManager.DAL
 {
-    public class StockRepository
+    public class StockRepository : IStockRepository
     {
-        private readonly DbContextOptions<StockDbContext> _options;
+        private readonly StockDbContext _dbContext;
 
-        public StockRepository()
+        public StockRepository(StockDbContext dbContext)
         {
-            _options = new DbContextOptionsBuilder<StockDbContext>()
-                .UseInMemoryDatabase("MyInMemoryDb")
-                .Options;
+            _dbContext = dbContext;
         }
 
         public List<Stock> GetStocks()
         {
-            using var db = new StockDbContext(_options);
-            return db.Stocks.ToList();
+            return _dbContext.Stocks.ToList();
         }
 
         public Stock GetStock(string ticker)
         {
-            using var db = new StockDbContext(_options);
-            return db.Stocks.Find(ticker);
+            return _dbContext.Stocks.Find(ticker);
         }
 
         public void AddStock(Stock stock)
         {
-            using var db = new StockDbContext(_options);
-            db.Stocks.Add(stock);
-            db.SaveChanges();
+            _dbContext.Stocks.Add(stock);
+            _dbContext.SaveChanges();
         }
 
         public void RemoveStock(string ticker)
         {
-            using var db = new StockDbContext(_options);
-            var stock = db.Stocks.Find(ticker);
-            db.Stocks.Remove(stock);
-            db.SaveChanges();
+            var stock = _dbContext.Stocks.Find(ticker);
+            _dbContext.Stocks.Remove(stock);
+            _dbContext.SaveChanges();
         }
 
         public void UpdateQuantity(string ticker, double quantity)
         {
-            using var db = new StockDbContext(_options);
-            var stock = db.Stocks.Find(ticker);
+            var stock = _dbContext.Stocks.Find(ticker);
             stock.Quantity = quantity;
-            db.SaveChanges();
+            _dbContext.SaveChanges();
         }
     }
 }

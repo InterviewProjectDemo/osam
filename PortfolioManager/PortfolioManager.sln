@@ -9,9 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{29F9B2B3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioManager.API", "src\PortfolioManager.API\PortfolioManager.API.csproj", "{1B359680-A151-4CA9-83C6-C71DA3819FC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioManager.BLL", "src\PortfolioManager.BLL\PortfolioManager.BLL.csproj", "{CAF64541-12C7-4FD9-A16F-F08CD76CAE64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioManager.BLL", "src\PortfolioManager.BLL\PortfolioManager.BLL.csproj", "{CAF64541-12C7-4FD9-A16F-F08CD76CAE64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioManager.DAL", "src\PortfolioManager.DAL\PortfolioManager.DAL.csproj", "{BB0CCB88-CE8C-4AB0-8042-A6BEF5236FB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioManager.DAL", "src\PortfolioManager.DAL\PortfolioManager.DAL.csproj", "{BB0CCB88-CE8C-4AB0-8042-A6BEF5236FB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioManager.API.Tests", "tests\PortfolioManager.API.Tests\PortfolioManager.API.Tests.csproj", "{F1B56412-D73B-4EB7-B053-E12C5715CCEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioManager.DAL.Tests", "tests\PortfolioManager.DAL.Tests\PortfolioManager.DAL.Tests.csproj", "{E96F5524-D949-4B3A-8DB7-0399E86214C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioManager.BLL.Tests", "tests\PortfolioManager.BLL.Tests\PortfolioManager.BLL.Tests.csproj", "{9A78C93C-D0C0-406F-8A27-0D87536945BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +37,18 @@ Global
 		{BB0CCB88-CE8C-4AB0-8042-A6BEF5236FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB0CCB88-CE8C-4AB0-8042-A6BEF5236FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB0CCB88-CE8C-4AB0-8042-A6BEF5236FB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B56412-D73B-4EB7-B053-E12C5715CCEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B56412-D73B-4EB7-B053-E12C5715CCEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B56412-D73B-4EB7-B053-E12C5715CCEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B56412-D73B-4EB7-B053-E12C5715CCEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E96F5524-D949-4B3A-8DB7-0399E86214C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96F5524-D949-4B3A-8DB7-0399E86214C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96F5524-D949-4B3A-8DB7-0399E86214C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96F5524-D949-4B3A-8DB7-0399E86214C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A78C93C-D0C0-406F-8A27-0D87536945BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A78C93C-D0C0-406F-8A27-0D87536945BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A78C93C-D0C0-406F-8A27-0D87536945BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A78C93C-D0C0-406F-8A27-0D87536945BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +57,9 @@ Global
 		{1B359680-A151-4CA9-83C6-C71DA3819FC8} = {7E989059-A2C6-4BCB-89F8-08313EC4CF3D}
 		{CAF64541-12C7-4FD9-A16F-F08CD76CAE64} = {7E989059-A2C6-4BCB-89F8-08313EC4CF3D}
 		{BB0CCB88-CE8C-4AB0-8042-A6BEF5236FB3} = {7E989059-A2C6-4BCB-89F8-08313EC4CF3D}
+		{F1B56412-D73B-4EB7-B053-E12C5715CCEE} = {29F9B2B3-C9A8-4E76-BB20-6D3ED939C1B1}
+		{E96F5524-D949-4B3A-8DB7-0399E86214C7} = {29F9B2B3-C9A8-4E76-BB20-6D3ED939C1B1}
+		{9A78C93C-D0C0-406F-8A27-0D87536945BC} = {29F9B2B3-C9A8-4E76-BB20-6D3ED939C1B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {94064627-DE64-4E84-A0D0-7E310EE67C4D}
